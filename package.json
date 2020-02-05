@@ -5,7 +5,9 @@
     "ng": "ng",
     "ng:update": "ng update @angular/cli @angular/core --allowDirty && npm audit fix",
     "start": "ng serve",
+    "start:dist": "npx http-server ./dist/$npm_package_name/",
     "build": "ng build",
+    "build:prod": "ng build -c production",
     "test": "ng test",
     "lint": "ng lint",
     "lint:fix": "npm run lint -- --fix=true",
@@ -13,7 +15,9 @@
     "lint:sass:fix": "sass-lint-auto-fix",
     "lint:editorconfig": "git ls-files -z | xargs -0 eclint check",
     "lint:editorconfig:fix": "git ls-files -z | xargs -0 eclint fix",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "bundle-analyzer": "npx webpack-bundle-analyzer ./dist/$npm_package_name/stats*.json --mode static --report ./documentation/bundle/index.html",
+    "bundle-analyzer:serve": "npx http-server ./documentation/bundle/"
   },
   "private": true,
   "dependencies": {
