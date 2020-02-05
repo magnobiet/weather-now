@@ -25,7 +25,8 @@
     "sonar:stop": "docker stop sonarqube",
     "sonar:scanner": "docker run --rm --network host --mount type=bind,source=\"$(pwd)\",target=/project-root --workdir /project-root magnobiet/sonar-scanner:latest sonar-scanner",
     "storybook:start": "start-storybook --static-dir ./dist/storybook/ --port 6006",
-    "storybook:build": "build-storybook --output-dir ./dist/storybook/"
+    "storybook:build": "build-storybook --output-dir ./dist/storybook/",
+    "changelog": "npx conventional-changelog-cli -p angular -i CHANGELOG.md -s"
   },
   "private": true,
   "dependencies": {
