@@ -1,6 +1,7 @@
 {
   "name": "weather-now",
   "version": "0.0.0",
+  "description": "Weather Now is a OpenWeatherMap project",
   "scripts": {
     "ng": "ng",
     "ng:update": "ng update @angular/cli @angular/core --allowDirty && npm audit fix",
@@ -17,7 +18,10 @@
     "lint:editorconfig:fix": "git ls-files -z | xargs -0 eclint fix",
     "e2e": "ng e2e",
     "bundle-analyzer": "npx webpack-bundle-analyzer ./dist/$npm_package_name/stats*.json --mode static --report ./documentation/bundle/index.html",
-    "bundle-analyzer:serve": "npx http-server ./documentation/bundle/"
+    "bundle-analyzer:serve": "npx http-server ./documentation/bundle/",
+    "sonar:start": "docker run --rm --name sonarqube -p 9000:9000 sonarqube",
+    "sonar:stop": "docker stop sonarqube",
+    "sonar:scanner": "docker run --rm --network host --mount type=bind,source=\"$(pwd)\",target=/project-root --workdir /project-root magnobiet/sonar-scanner:latest sonar-scanner"
   },
   "private": true,
   "dependencies": {
