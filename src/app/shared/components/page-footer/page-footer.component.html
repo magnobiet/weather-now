@@ -1,0 +1,16 @@
+<footer>
+
+  <div class="container">
+
+    <p class="m-0 text-center text-muted">
+      <small>
+        ©
+        <ng-container *ngIf="currentYear !== initialYear; else oneYear">{{ initialYear }}-{{ currentYear }}</ng-container>
+        <ng-template #oneYear>{{ currentYear }}</ng-template>
+        Weather Now. All rights reserved.
+      </small>
+    </p>
+
+  </div>
+
+</footer>

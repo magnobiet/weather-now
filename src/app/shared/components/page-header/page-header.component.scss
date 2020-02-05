@@ -1,0 +1,9 @@
+@import '../../../../styles/tools/tools';
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: rem(50px);
+  background: $color-white;
+}
