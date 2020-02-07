@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "weather-now"
+  "defaultProject": "weather-now",
+  "cli": {
+    "analytics": false
+  }
 }

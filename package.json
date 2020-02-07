@@ -26,27 +26,28 @@
     "sonar:scanner": "docker run --rm --network host --mount type=bind,source=\"$(pwd)\",target=/project-root --workdir /project-root magnobiet/sonar-scanner:latest sonar-scanner",
     "storybook:start": "start-storybook --static-dir ./dist/storybook/ --port 6006",
     "storybook:build": "build-storybook --output-dir ./dist/storybook/",
-    "changelog": "npx conventional-changelog-cli -p angular -i CHANGELOG.md -s"
+    "changelog": "npx conventional-changelog-cli -p angular -i CHANGELOG.md -s",
+    "postinstall": "ngcc"
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~8.2.14",
-    "@angular/common": "~8.2.14",
-    "@angular/compiler": "~8.2.14",
-    "@angular/core": "~8.2.14",
-    "@angular/forms": "~8.2.14",
-    "@angular/platform-browser": "~8.2.14",
-    "@angular/platform-browser-dynamic": "~8.2.14",
-    "@angular/router": "~8.2.14",
+    "@angular/animations": "~9.0.0",
+    "@angular/common": "~9.0.0",
+    "@angular/compiler": "~9.0.0",
+    "@angular/core": "~9.0.0",
+    "@angular/forms": "~9.0.0",
+    "@angular/platform-browser": "~9.0.0",
+    "@angular/platform-browser-dynamic": "~9.0.0",
+    "@angular/router": "~9.0.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
-    "zone.js": "~0.9.1"
+    "zone.js": "~0.10.2"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.803.24",
-    "@angular/cli": "~8.3.24",
-    "@angular/compiler-cli": "~8.2.14",
-    "@angular/language-service": "~8.2.14",
+    "@angular-devkit/build-angular": "~0.900.1",
+    "@angular/cli": "~9.0.1",
+    "@angular/compiler-cli": "~9.0.0",
+    "@angular/language-service": "~9.0.0",
     "@babel/core": "^7.8.4",
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
@@ -58,7 +59,7 @@
     "@storybook/angular": "^5.3.12",
     "@types/jasmine": "~3.5.3",
     "@types/jasminewd2": "~2.0.8",
-    "@types/node": "~13.7.0",
+    "@types/node": "^13.7.0",
     "babel-loader": "^8.0.6",
     "codelyzer": "^5.2.1",
     "eclint": "^2.8.1",
@@ -76,6 +77,6 @@
     "sass-lint-auto-fix": "^0.21.0",
     "ts-node": "~8.6.2",
     "tslint": "^6.0.0",
-    "typescript": "~3.5.3"
+    "typescript": "~3.7.5"
   }
 }
