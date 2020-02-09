@@ -15,7 +15,7 @@ export class WeatherService {
 
   public byCityName(location: string): Observable<Weather> {
 
-    const { endpoint, apiKey } = environment.openWatherMap;
+    const { endpoint, apiKey } = environment.openWeatherMap;
 
     return this.httpClient
       .get<IWeatherResponse>(`${endpoint}weather?appid=${apiKey}&units=metric&q=${location}`)

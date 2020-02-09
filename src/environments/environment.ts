@@ -4,9 +4,9 @@
 
 export const environment = {
   production: false,
-  openWatherMap: {
+  openWeatherMap: {
     endpoint: 'https://api.openweathermap.org/data/2.5/',
-    apiKey: ''
+    apiKey: '7bf394cbcf356d512c33916db371bdfe'
   }
 };
 
