@@ -1,15 +1,63 @@
-<div class="card">
+<div class="card shadow-bottom">
 
   <div class="card-header">
-    card-header
+    {{ location }}
   </div>
 
-  <div class="card-body">
-    card-body
-  </div>
+  <ng-container *ngIf="loading; else done">
 
-  <div class="card-footer">
-    card-footer
-  </div>
+    <div class="card-body">
+      <wn-loader [width]="46" [width]="46"></wn-loader>
+    </div>
+  </ng-container>
+
+  <ng-template #done>
+
+    <ng-container *ngIf="!error; else retry">
+
+      <div class="card-body">
+
+        <span class="temperature" [ngClass]="{ 'low-temperature': weather?.temperature < 5, 'high-temperature': weather?.temperature >= 25 }">
+          {{ weather?.temperature }}<sup class="indicator">º</sup>
+        </span>
+
+      </div>
+
+      <div class="card-footer">
+
+        <div class="data">
+
+          <div class="humidity">
+            <span class="title">Humidity</span>
+            <span class="value">{{ weather?.humidity }}</span><span class="unit">%</span>
+          </div>
+
+          <div class="pressure">
+            <span class="title">Pressure</span>
+            <span class="value">{{ weather?.pressure }}</span>
+            <span class="unit">hPA</span>
+          </div>
+
+        </div>
+
+        <p class="latest-update">Updated at {{ weather?.lastUpdate | date: 'mediumTime' }}</p>
+
+      </div>
+
+    </ng-container>
+
+    <ng-template #retry>
+
+      <div class="card-body">
+
+        <p class="error-message">Something went wrong</p>
+
+        <button type="button" class="btn-retry" (click)="loadData()">Try Again</button>
+
+      </div>
+
+    </ng-template>
+
+  </ng-template>
 
 </div>

@@ -1,1 +1,68 @@
+@import '../../../../../styles/tools/tools';
 
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: rem(176px);
+
+  .temperature {
+    color: $color-neon-carrot;
+    font-size: rem(96px);
+    letter-spacing: rem(1px);
+  }
+
+  .low-temperature {
+    color: $color-malibu;
+  }
+
+  .high-temperature {
+    color: $color-crimson;
+  }
+
+  .indicator {
+    display: inline-block;
+    font-size: rem(40px);
+  }
+}
+
+.card-footer {
+  .title {
+    display: block;
+    font-size: rem(12px);
+    text-transform: uppercase;
+  }
+
+  .value {
+    color: $color-rolling-stone;
+    font-size: rem(18px);
+  }
+
+  .unit {
+    font-size: rem(12px);
+  }
+
+  .data {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .latest-update {
+    font-size: rem(10px);
+  }
+}
+
+.error-message {
+  color: $color-crimson;
+}
+
+.btn-retry {
+  width: rem(100px);
+  height: rem(42px);
+  color: $color-rolling-stone;
+  font-size: 16px;
+  background: $color-white;
+  border: rem(2px solid $color-rolling-stone);
+  border-radius: rem(25px);
+}

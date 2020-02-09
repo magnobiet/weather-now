@@ -1,1 +1,5 @@
-<wn-current-weather></wn-current-weather>
+<div class="container">
+
+  <wn-current-weather class="current-weather-card" *ngFor="let location of locations" [location]="location"></wn-current-weather>
+
+</div>

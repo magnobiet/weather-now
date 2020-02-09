@@ -1,1 +1,24 @@
+@import '../../../../../styles/tools/tools';
 
+.container {
+  width: 100%;
+  height: 100%;
+
+  @media (min-width: rem(768px)) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.current-weather-card {
+  display: block;
+  width: 100%;
+  margin-bottom: rem(32px);
+
+  &:not(:last-child) {
+    @media (min-width: rem(768px)) {
+      margin-right: rem(48px);
+    }
+  }
+}
