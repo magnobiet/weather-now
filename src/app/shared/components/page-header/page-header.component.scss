@@ -2,8 +2,11 @@
 
 .page-header {
   display: flex;
+  position: fixed;
+  top: 0;
   align-items: center;
   justify-content: center;
-  height: rem(50px);
+  width: 100vw;
+  height: rem($header-height);
   background: $color-white;
 }

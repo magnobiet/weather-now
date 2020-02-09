@@ -1,1 +1,10 @@
+@import '../../../../styles/tools/tools';
 
+.page-body {
+  height: 100vh;
+  padding: rem(32px + $header-height) rem(32px) rem(32px) rem(32px);
+
+  @media (min-width: rem(768px)) {
+    padding: rem(96px);
+  }
+}

@@ -13,7 +13,9 @@ body {
 }
 
 body {
-  font-family: $default-font-family;
-  font-size: $browser-context;
+  font: {
+    family: $default-font-family;
+    size: $browser-context;
+  };
   background: $color-seashell;
 }
