@@ -1,0 +1,7 @@
+{
+  "root": "dist/weather-now",
+  "https_only": true,
+  "routes": {
+    "/**": "index.html"
+  }
+}

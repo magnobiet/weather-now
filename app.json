@@ -1,0 +1,20 @@
+{
+  "name": "Weather Now",
+  "description": "Weather Now is a OpenWeatherMap project",
+  "repository": "https://github.com/magnobiet/weather-now",
+  "logo": "https://raw.githubusercontent.com/magnobiet/weather-now/master/logo.svg?token=AANJVDIWL7KO3O5CVOX6CFS6JF6ZQ",
+  "website": "https://weather.magnobiet.com/",
+  "keywords": [
+    "weather",
+    "openweathermap",
+    "angular"
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-nodejs"
+    },
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-static"
+    }
+  ]
+}
