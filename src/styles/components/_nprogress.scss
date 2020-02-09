@@ -1,0 +1,65 @@
+#nprogress {
+  pointer-events: none;
+
+  .bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1031;
+    width: 100%;
+    height: rem(2px);
+    background: $color-neon-carrot;
+  }
+
+  .peg {
+    display: block;
+    position: absolute;
+    right: 0;
+    opacity: 1;
+    width: rem(100px);
+    height: 100%;
+    transform: rotate(3deg) translate(0, rem(-4px));
+    box-shadow: 0 0 10px $color-neon-carrot, 0 0 rem(5px) $color-neon-carrot;
+  }
+
+  .spinner {
+    display: block;
+    position: fixed;
+    top: rem(15px);
+    right: rem(15px);
+    z-index: 1031;
+  }
+
+  .spinner-icon {
+    width: rem(18px);
+    height: rem(18px);
+    border: solid rem(2px) transparent;
+    border-top-color: $color-neon-carrot;
+    border-left-color: $color-neon-carrot;
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: nprogress-spinner 400ms linear infinite;
+  }
+}
+
+.nprogress-custom-parent {
+  position: relative;
+  overflow: hidden;
+
+  #nprogress {
+    .spinner,
+    .bar {
+      position: absolute;
+    }
+  }
+}
+
+@keyframes nprogress-spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
