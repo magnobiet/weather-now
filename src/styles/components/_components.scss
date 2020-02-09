@@ -1,26 +1,4 @@
 @import '../tools/tools';
 
-.card {
-  width: 100%;
-  background: $color-white;
-  border: rem(1px) solid $color-gallery;
-}
-
-.card-header,
-.card-body,
-.card-footer {
-  padding: rem(21px);
-}
-
-.card-header {
-  color: $color-rolling-stone;
-  font-size: rem(18px);
-  text-align: center;
-  border-bottom: rem(1px) solid $color-gallery;
-}
-
-.card-footer {
-  color: $color-nobel;
-  text-align: center;
-  background: rgba($color-seashell, 50%);
-}
+@import './card';
+@import './nprogress';
