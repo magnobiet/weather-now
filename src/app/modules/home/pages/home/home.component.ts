@@ -10,7 +10,7 @@ export class HomeComponent {
   public locations = [
     'Urubici, BR',
     'Nuuk, GL',
-    'Nairobasdis, KE'
+    'Nairobi, KE'
   ];
 
 }
