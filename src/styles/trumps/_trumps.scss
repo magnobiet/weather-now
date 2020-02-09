@@ -1,1 +1,9 @@
+@import '../tools/tools';
 
+.shadow {
+  box-shadow: 0 0 rem(3px) rgba($color-mine-shaft, 10%);
+}
+
+.shadow-bottom {
+  box-shadow: 0 rem(2px) rem(3px) rgba($color-mine-shaft, 10%);
+}
