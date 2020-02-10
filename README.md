@@ -9,26 +9,52 @@
 
 ![Preview](preview.png)
 
-## Development server
+## TL;DR
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Development
 
-## Code scaffolding
+```bash
+# clone this repository and then run
+npm install
+npm start
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+#### Documentation
 
-## Build
+##### Storybook
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```bash
+npm run storybook:start
+```
 
-## Running unit tests
+#### Test
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+npm run test # just smoke tests for now
+```
 
-## Running end-to-end tests
+#### Analyses
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+##### Bundle size
 
-## Further help
+```bash
+npm run bundle-analyzer
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+##### Code Quality
+
+```bash
+# start a SonarQube Server (requires Docker)
+npm run sonar:start
+
+# when SonarQube Server is up, in another terminal instance/tab run
+npm run sonar:scanner
+# and then, navigate to http://localhost:9000 and use `admin` as username and password to see the report
+```
+
+### Build
+
+```bash
+npm run build:prod
+npm run start:dist # run a simple HTTP server to preview the application build
+```
