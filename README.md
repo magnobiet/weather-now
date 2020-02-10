@@ -33,7 +33,7 @@ npm run storybook:start
 npm run test # just smoke tests for now
 ```
 
-#### Analyses
+#### Analysis
 
 ##### Bundle size
 
