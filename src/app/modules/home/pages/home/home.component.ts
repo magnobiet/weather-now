@@ -8,9 +8,9 @@ import { Component } from '@angular/core';
 export class HomeComponent {
 
   public locations = [
-    'Urubici, BR',
-    'Nuuk, GL',
-    'Nairobi, KE'
+    'Caxias do Sul, BR',
+    'São Leopoldo, BR',
+    'Nova Hartz, BR'
   ];
 
 }
